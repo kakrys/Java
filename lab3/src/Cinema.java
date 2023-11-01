@@ -20,7 +20,7 @@ public class Cinema {
         return price;
     }
 
-    public void showCinemaInfo() {
+    public void Info() {
         System.out.println("Информация о данном кинотеатре:");
         System.out.println("Количество парковочных мест: " + parkingplaces);
         System.out.println("Стоимость билета: " + price);

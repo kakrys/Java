@@ -15,7 +15,7 @@ public class Hall {
         return seats;
     }
 
-    public void showHallInfo() {
+    public void Info() {
         System.out.println("Данный зал имеет " + seats.length + " рядов по " + seats[0].length + " мест в каждом");
         System.out.println("В данном зале идет фильм:" + FilmName);
         System.out.println("Сеансы данного зала:");

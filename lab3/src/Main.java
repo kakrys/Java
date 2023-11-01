@@ -5,11 +5,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] Session1 = new int[]{12, 0, 180};
-        int[] Session2 = new int[]{15, 15, 120};
+        int[] Session1 = new int[]{9, 0, 245};
+        int[] Session2 = new int[]{23, 30, 120};
         Hall[] halls;
-        halls = new Hall[]{new Hall(new int[][]{Session1}, new boolean[10][15], "Терминатор"),
-                new Hall(new int[][]{Session2}, new boolean[20][40], "Мстители")};
+        halls = new Hall[]{new Hall(new int[][]{Session1}, new boolean[10][10], "Терминатор"),
+                new Hall(new int[][]{Session2}, new boolean[5][5], "Мстители")};
 
         Cinema cinema1 = new Cinema(new Hall[]{halls[0]}, 43, 765);
         Cinema cinema2 = new Cinema(new Hall[]{halls[1]}, 21, 345);
@@ -20,8 +20,8 @@ public class Main {
         while (true) {
             System.out.println("Введите номер кинотеатра (1/2):");
             int cinemaNumber = scanner.nextInt();
-            if (cinemaNumber == 1) cinema1.showCinemaInfo();
-            if (cinemaNumber == 2) cinema2.showCinemaInfo();
+            if (cinemaNumber == 1) cinema1.Info();
+            if (cinemaNumber == 2) cinema2.Info();
 
             if (cinemaNumber == 0) {
                 break;
@@ -31,7 +31,7 @@ public class Main {
 
             System.out.println("Введите номер зала (от 1 до " + cinema.getHalls().length + "):");
             int hallNumber = scanner.nextInt();
-            halls[hallNumber].showHallInfo();
+            halls[hallNumber].Info();
 
             while (hallNumber < 1 || hallNumber > cinema.getHalls().length) {
                 System.out.println("Такого зала не существует");
